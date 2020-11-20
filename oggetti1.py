@@ -5,7 +5,7 @@ class CSVFile:
 
     def get_data(self):
 
-        file = open("shampoo_sales.csv","r")
+        file = open(self.name,"r")
 
         total_values = []
 
@@ -14,8 +14,12 @@ class CSVFile:
 
             if elements[0] != "Date":
                 value=elements[1]
+                
+                try:
+                    total_values.append(float(value))
 
-                total_values.append(float(value))
+                except:
+                    print("errore scpnosciuto alla linea {}".format(line))    
 
         file.close()
         return(total_values)
@@ -23,4 +27,5 @@ class CSVFile:
 
 file = CSVFile('shampoo_sales.csv')
 dati = file.get_data()
+print(file.name)
 print(dati)

@@ -1,8 +1,8 @@
-f=open("shampoo_sales.csv", "r")
+file=open("shampoo_sales.csv", "r")
 total_values=[]
 sum=0
 
-for line in f:
+for line in file:
     elements=line.split(",")
 
     if elements[0] != "Date":
@@ -13,7 +13,6 @@ for line in f:
 
         total_values.append(float(value))
 
-print(total_values)
-print(sum)        
 
+print(round(sum,1))        
 
