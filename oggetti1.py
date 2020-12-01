@@ -41,15 +41,10 @@ class CSVFile:
 
 
 file = CSVFile('shampoo_sales.csv')
-<<<<<<< HEAD
 #dati = file.get_data(5,8)
 #print(file.name)
 #print(dati)
 lista = file.get_data(0, 37)
 x = file.predict(lista)
 print(x)
-=======
-dati = file.get_data(5,8)
-print(file.name)
-print(dati)
->>>>>>> 2016e852cadd41a21402f8274b8e40b97eafe6ee
+
