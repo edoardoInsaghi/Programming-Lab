@@ -46,6 +46,10 @@ class CSVTimeSeriesFile:
             if i > 0 and time_series[i][0] <= time_series[i-1][0]:
                 raise ExamException('Epochs not in order.')
 
+        file.close()
+        if len(time_series) == 0:
+            raise ExamException("Empty file or invalid data.")
+
         return time_series
 
 
